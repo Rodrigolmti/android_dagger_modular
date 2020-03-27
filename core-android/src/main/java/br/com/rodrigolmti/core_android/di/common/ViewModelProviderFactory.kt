@@ -1,4 +1,4 @@
-package br.com.rodrigolmti.android_dagger_modular.di.common
+package br.com.rodrigolmti.core_android.di.common
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
