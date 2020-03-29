@@ -1,13 +1,14 @@
-package br.com.rodrigolmti.android_dagger_modular.features.ui
+package br.com.rodrigolmti.authentication.ui
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import br.com.rodrigolmti.android_dagger_modular.MainApp
-import br.com.rodrigolmti.android_dagger_modular.R
-import br.com.rodrigolmti.android_dagger_modular.core.BaseFragment
+import androidx.core.content.ContextCompat
+import br.com.rodrigolmti.authentication.R
+import br.com.rodrigolmti.core_android.BaseFragment
 
 class AuthenticationFragment : BaseFragment() {
 
@@ -26,6 +27,7 @@ class AuthenticationFragment : BaseFragment() {
     }
 
     companion object {
-        fun newInstance() = AuthenticationFragment()
+        fun newInstance() =
+            AuthenticationFragment()
     }
 }

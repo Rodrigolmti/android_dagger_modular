@@ -1,6 +1,6 @@
-package br.com.rodrigolmti.android_dagger_modular.features.di
+package br.com.rodrigolmti.authentication.di
 
-import br.com.rodrigolmti.android_dagger_modular.features.ui.AuthenticationFragment
+import br.com.rodrigolmti.authentication.ui.AuthenticationFragment
 import dagger.Subcomponent
 
 @AuthenticationScope

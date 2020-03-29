@@ -1,11 +1,11 @@
-package br.com.rodrigolmti.android_dagger_modular.core
+package br.com.rodrigolmti.core_android
 
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import javax.inject.Inject
 
-open class BaseFragment : Fragment() {
+abstract class BaseFragment : Fragment() {
 
     @Inject
     internal lateinit var viewModelFactory: ViewModelProvider.Factory
