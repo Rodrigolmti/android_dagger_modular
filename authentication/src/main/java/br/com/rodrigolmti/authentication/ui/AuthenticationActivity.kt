@@ -9,7 +9,7 @@ import javax.inject.Provider
 
 typealias AuthenticationProvider = Provider<AuthenticationSubComponent>
 
-internal class AuthenticationActivity : BaseActivity<AuthenticationSubComponent>(),
+class AuthenticationActivity : BaseActivity<AuthenticationSubComponent>(),
     AuthenticationProvider {
 
     override fun onCreate(savedInstanceState: Bundle?) {

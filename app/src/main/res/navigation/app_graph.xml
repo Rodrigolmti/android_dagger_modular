@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="br.com.rodrigolmti.android_dagger_modular.ui.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_authenticationActivity"
+            app:destination="@id/authenticationActivity"
+            app:popUpTo="@id/authenticationActivity"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <activity
+        android:id="@+id/authenticationActivity"
+        android:name="br.com.rodrigolmti.authentication.ui.AuthenticationActivity"
+        android:label="AuthenticationActivity" />
+
+</navigation>

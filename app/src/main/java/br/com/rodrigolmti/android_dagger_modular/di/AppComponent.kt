@@ -1,7 +1,7 @@
 package br.com.rodrigolmti.android_dagger_modular.di
 
 import android.app.Application
-import br.com.rodrigolmti.android_dagger_modular.MainActivity
+import br.com.rodrigolmti.android_dagger_modular.ui.SplashActivity
 import br.com.rodrigolmti.android_dagger_modular.di.modules.AppModule
 import br.com.rodrigolmti.android_dagger_modular.di.modules.AppNavigatorsModule
 import br.com.rodrigolmti.authentication.di.AuthenticationSubComponent
@@ -13,7 +13,7 @@ import javax.inject.Singleton
 @Component(modules = [AppModule::class, AppNavigatorsModule::class])
 interface AppComponent {
 
-    fun inject(activity: MainActivity)
+    fun inject(activity: SplashActivity)
 
     fun authenticationSubComponent(): AuthenticationSubComponent
 

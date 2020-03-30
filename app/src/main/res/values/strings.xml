@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">android_dagger_modular</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="splash_screen_title">Android modular project\nwith Dagger 2</string>
 </resources>

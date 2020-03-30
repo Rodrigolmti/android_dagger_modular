@@ -1,3 +1,4 @@
+include ':dashboard'
 include ':authentication'
 include ':core-android'
 include ':injector'

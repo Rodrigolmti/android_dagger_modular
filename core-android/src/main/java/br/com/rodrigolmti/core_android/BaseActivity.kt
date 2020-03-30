@@ -1,9 +1,8 @@
 package br.com.rodrigolmti.core_android
 
-import android.app.Activity
-import javax.inject.Provider
+import androidx.appcompat.app.AppCompatActivity
 
-abstract class BaseActivity<C : Any> : Activity() {
+abstract class BaseActivity<C : Any> : AppCompatActivity() {
 
     protected lateinit var component: C
 }

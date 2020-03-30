@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/authenticationFragment"
+    android:id="@+id/authentication_graph">
+
+    <fragment
+        android:id="@+id/authenticationFragment"
+        android:name="br.com.rodrigolmti.authentication.ui.AuthenticationFragment"
+        android:label="authentication_fragment"
+        tools:layout="@layout/authentication_fragment" />
+
+</navigation>
