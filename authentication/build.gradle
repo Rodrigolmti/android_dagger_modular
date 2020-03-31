@@ -17,6 +17,12 @@ android {
         consumerProguardFiles "consumer-rules.pro"
     }
 
+    sourceSets {
+        main {
+            java.srcDirs += 'src/main/kotlin'
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -45,4 +51,5 @@ dependencies {
 
     implementation project(':core-android')
     implementation project(':navigator')
+    implementation project(':injector')
 }

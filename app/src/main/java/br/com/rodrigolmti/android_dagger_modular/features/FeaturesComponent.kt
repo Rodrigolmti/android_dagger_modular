@@ -1,5 +1,0 @@
-package br.com.rodrigolmti.android_dagger_modular.features
-
-import br.com.rodrigolmti.authentication.di.AuthenticationComponentProvider
-
-interface FeaturesComponent : AuthenticationComponentProvider

@@ -17,6 +17,12 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    sourceSets {
+        main {
+            java.srcDirs += 'src/main/kotlin'
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -45,6 +51,7 @@ dependencies {
     implementation project(':authentication')
     implementation project(':dashboard')
     implementation project(':navigator')
+    implementation project(':injector')
 
     implementation "com.google.dagger:dagger:$dagger_version"
     kapt "com.google.dagger:dagger-compiler:$dagger_version"

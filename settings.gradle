@@ -1,7 +1,10 @@
+include ':buildSrc'
+include ':injector'
+include ':build-manager'
 include ':dashboard'
 include ':authentication'
 include ':core-android'
-include ':injector'
 include ':navigator'
 include ':app'
+
 rootProject.name = "android_dagger_modular"
