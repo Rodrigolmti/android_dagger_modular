@@ -1,23 +1,19 @@
 package br.com.rodrigolmti.android_dagger_modular
 
 import android.app.Application
-import br.com.rodrigolmti.android_dagger_modular.di.AppComponent
-import br.com.rodrigolmti.android_dagger_modular.di.DaggerAppComponent
-import br.com.rodrigolmti.injector.CoreComponent
-import br.com.rodrigolmti.injector.CoreComponentProvider
-import br.com.rodrigolmti.injector.DaggerCoreComponent
+import br.com.rodrigolmti.android_dagger_modular.di.ApplicationComponent
+import br.com.rodrigolmti.android_dagger_modular.di.DaggerApplicationComponent
+import br.com.rodrigolmti.core_android.di.App
+import br.com.rodrigolmti.core_android.di.ApplicationProvider
 
-class MainApp : Application(), CoreComponentProvider {
+class MainApp : Application(), App {
 
-    private val component: AppComponent by lazy {
-        DaggerAppComponent.builder().application(this).build()
+    private val component: ApplicationComponent by lazy {
+        DaggerApplicationComponent.builder()
+            .build()
     }
 
-    private val coreComponent: CoreComponent by lazy {
-        DaggerCoreComponent.builder().build()
-    }
+    override fun applicationProvider(): ApplicationProvider = component
 
-    override fun coreComponent(): CoreComponent = coreComponent
-
-    fun appComponent(): AppComponent = component
+    fun applicationComponent(): ApplicationComponent = component
 }

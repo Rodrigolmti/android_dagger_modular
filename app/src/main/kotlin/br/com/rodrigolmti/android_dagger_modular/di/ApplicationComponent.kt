@@ -1,10 +1,10 @@
 package br.com.rodrigolmti.android_dagger_modular.di
 
-import android.app.Application
+import br.com.rodrigolmti.android_dagger_modular.MainApp
 import br.com.rodrigolmti.android_dagger_modular.di.modules.AppModule
 import br.com.rodrigolmti.android_dagger_modular.di.modules.AppNavigatorsModule
 import br.com.rodrigolmti.android_dagger_modular.ui.SplashFragment
-import dagger.BindsInstance
+import br.com.rodrigolmti.core_android.di.ApplicationProvider
 import dagger.Component
 import javax.inject.Singleton
 
@@ -12,16 +12,9 @@ import javax.inject.Singleton
 @Component(
     modules = [AppModule::class, AppNavigatorsModule::class]
 )
-interface AppComponent {
+interface ApplicationComponent : ApplicationProvider {
 
     fun inject(fragment: SplashFragment)
 
-    @Component.Builder
-    interface Builder {
-
-        @BindsInstance
-        fun application(application: Application): Builder
-
-        fun build(): AppComponent
-    }
+    fun inject(app: MainApp)
 }

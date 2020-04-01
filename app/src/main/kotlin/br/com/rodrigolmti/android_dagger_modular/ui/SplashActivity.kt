@@ -4,15 +4,15 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import br.com.rodrigolmti.android_dagger_modular.MainApp
 import br.com.rodrigolmti.android_dagger_modular.R
-import br.com.rodrigolmti.android_dagger_modular.di.AppComponent
+import br.com.rodrigolmti.android_dagger_modular.di.ApplicationComponent
 
 class SplashActivity : AppCompatActivity() {
 
-    lateinit var appComponent: AppComponent
+    lateinit var applicationComponent: ApplicationComponent
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.splash_activity)
-        appComponent = (applicationContext as MainApp).appComponent()
+        applicationComponent = (applicationContext as MainApp).applicationComponent()
     }
 }

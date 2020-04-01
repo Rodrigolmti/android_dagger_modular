@@ -26,7 +26,7 @@ class SplashFragment : Fragment() {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        (context as SplashActivity).appComponent.inject(this)
+        (context as SplashActivity).applicationComponent.inject(this)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
