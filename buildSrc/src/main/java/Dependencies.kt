@@ -1,5 +1,6 @@
 object ApplicationId {
     const val id = "br.com.rodrigolmti.android_dagger_modular"
+    const val demo = "br.com.rodrigolmti.android_dagger_modular.demo"
 }
 
 object Versions {

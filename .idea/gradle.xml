@@ -17,6 +17,7 @@
             <option value="$PROJECT_DIR$/buildSrc" />
             <option value="$PROJECT_DIR$/core-android" />
             <option value="$PROJECT_DIR$/dashboard" />
+            <option value="$PROJECT_DIR$/feature-demo" />
             <option value="$PROJECT_DIR$/injector" />
             <option value="$PROJECT_DIR$/navigator" />
           </set>
