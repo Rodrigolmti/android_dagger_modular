@@ -3,7 +3,7 @@ package br.com.rodrigolmti.android_dagger_modular.di
 import android.app.Application
 import br.com.rodrigolmti.android_dagger_modular.di.modules.AppModule
 import br.com.rodrigolmti.android_dagger_modular.di.modules.AppNavigatorsModule
-import br.com.rodrigolmti.android_dagger_modular.ui.SplashActivity
+import br.com.rodrigolmti.android_dagger_modular.ui.SplashFragment
 import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Singleton
@@ -14,7 +14,7 @@ import javax.inject.Singleton
 )
 interface AppComponent {
 
-    fun inject(activity: SplashActivity)
+    fun inject(fragment: SplashFragment)
 
     @Component.Builder
     interface Builder {

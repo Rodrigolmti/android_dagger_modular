@@ -6,6 +6,6 @@ import javax.inject.Inject
 class AppAuthenticationNavigator @Inject constructor() : AuthenticationNavigator {
 
     override fun showAuthentication() {
-
+        print("sdasd")
     }
 }

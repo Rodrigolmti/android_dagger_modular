@@ -45,6 +45,7 @@ object Dagger {
 
     const val core = "com.google.dagger:dagger:${Versions.dagger}"
     const val compiler = "com.google.dagger:dagger-compiler:${Versions.dagger}"
+    const val android = "com.google.dagger:dagger-android-support:${Versions.dagger}"
 }
 
 object Navigation {
