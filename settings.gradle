@@ -1,4 +1,3 @@
-include ':buildSrc'
 include ':injector'
 include ':build-manager'
 include ':dashboard'

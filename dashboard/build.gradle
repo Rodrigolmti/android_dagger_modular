@@ -1,17 +1,20 @@
+import Releases
+import Versions
+
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.3"
+    compileSdkVersion Versions.compileSdk
+    buildToolsVersion Versions.buildTools
 
     defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion Versions.minSdk
+        targetSdkVersion Versions.targetSdk
+        versionCode Releases.versionCode
+        versionName Releases.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -32,22 +35,24 @@ android {
 }
 
 dependencies {
-    def dagger_version = "2.25.4"
-    def fragment_version = "1.2.3"
-    def nav_version = "2.3.0-alpha04"
+    implementation Kotlin.stdlib
 
-    implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation "androidx.fragment:fragment-ktx:$fragment_version"
-    implementation 'androidx.core:core-ktx:1.2.0'
-    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation AndroidX.ktx
+    implementation AndroidX.fragment
+    implementation AndroidX.appcompat
 
-    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
-    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+    implementation Layout.constraint
 
-    implementation "com.google.dagger:dagger:$dagger_version"
-    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+    implementation Lifecycle.liveData
+    implementation Lifecycle.viewModel
 
-    implementation project(':core-android')
-    implementation project(':navigator')
+    implementation Navigation.navigationFragment
+    implementation Navigation.navigationUi
+
+    implementation project(Modules.coreAndroid)
+    implementation project(Modules.navigator)
+    implementation project(Modules.injector)
+
+    implementation Dagger.core
+    kapt Dagger.compiler
 }

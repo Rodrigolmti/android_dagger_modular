@@ -4,15 +4,15 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.3"
+    compileSdkVersion Versions.compileSdk
+    buildToolsVersion Versions.buildTools
 
     defaultConfig {
-        applicationId "br.com.rodrigolmti.android_dagger_modular"
-        minSdkVersion 21
-        targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        applicationId ApplicationId.id
+        minSdkVersion Versions.minSdk
+        targetSdkVersion Versions.targetSdk
+        versionCode Releases.versionCode
+        versionName Releases.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -32,27 +32,26 @@ android {
 }
 
 dependencies {
-    def dagger_version = "2.25.4"
-    def nav_version = "2.3.0-alpha04"
+    implementation Kotlin.stdlib
 
-    implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.core:core-ktx:1.1.0'
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0'
+    implementation AndroidX.ktx
+    implementation AndroidX.fragment
+    implementation AndroidX.appcompat
 
-    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
-    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+    implementation Layout.constraint
 
-    implementation project(':core-android')
-    implementation project(':authentication')
-    implementation project(':dashboard')
-    implementation project(':navigator')
-    implementation project(':injector')
+    implementation Lifecycle.liveData
+    implementation Lifecycle.viewModel
 
-    implementation "com.google.dagger:dagger:$dagger_version"
-    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+    implementation Navigation.navigationFragment
+    implementation Navigation.navigationUi
+
+    implementation project(Modules.coreAndroid)
+    implementation project(Modules.authentication)
+    implementation project(Modules.dashboard)
+    implementation project(Modules.navigator)
+    implementation project(Modules.injector)
+
+    implementation Dagger.core
+    kapt Dagger.compiler
 }
