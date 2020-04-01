@@ -12,6 +12,6 @@ abstract class AuthenticationViewModelModule {
 
     @[Binds IntoMap ViewModelKey(AuthenticationViewModel::class)]
     internal abstract fun bindAuthenticationViewModel(
-        authenticationViewModel: AuthenticationViewModel
+        viewModel: AuthenticationViewModel
     ): ViewModel
 }
