@@ -13,4 +13,4 @@ Goals:
 Missing:
 
 - Have dynamic feature modules
-- Implement the feature using MVVM and clean architecture
+- Implement the features using MVVM and clean architecture
