@@ -2,7 +2,9 @@
     package="br.com.rodrigolmti.authentication">
 
     <application android:theme="@style/AppTheme">
-        <activity android:name=".ui.AuthenticationActivity">
+        <activity
+            android:name=".ui.AuthenticationActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="br.com.rodrigolmti.authentication.open" />
                 <category android:name="android.intent.category.DEFAULT" />
