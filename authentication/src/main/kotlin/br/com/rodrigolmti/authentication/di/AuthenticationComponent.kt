@@ -23,13 +23,12 @@ interface AuthenticationComponent {
 
         fun coreComponent(component: CoreComponent): Builder
     }
-}
 
-object Injector {
+    companion object {
 
-    @JvmStatic
-    fun inject(activity: AuthenticationActivity): AuthenticationComponent =
-        DaggerAuthenticationComponent.builder()
-            .coreComponent(activity.coreComponent())
-            .build()
+        fun inject(activity: AuthenticationActivity): AuthenticationComponent =
+            DaggerAuthenticationComponent.builder()
+                .coreComponent(activity.coreComponent())
+                .build()
+    }
 }

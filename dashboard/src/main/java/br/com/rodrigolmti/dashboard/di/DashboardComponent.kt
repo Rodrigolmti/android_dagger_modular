@@ -23,13 +23,12 @@ interface DashboardComponent {
 
         fun coreComponent(component: CoreComponent): Builder
     }
-}
 
-object Injector {
+    companion object {
 
-    @JvmStatic
-    fun inject(activity: DashboardActivity): DashboardComponent =
-        DaggerDashboardComponent.builder()
-            .coreComponent(activity.coreComponent())
-            .build()
+        fun inject(activity: DashboardActivity): DashboardComponent =
+            DaggerDashboardComponent.builder()
+                .coreComponent(activity.coreComponent())
+                .build()
+    }
 }

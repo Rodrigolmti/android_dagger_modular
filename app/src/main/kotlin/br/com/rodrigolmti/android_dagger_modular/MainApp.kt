@@ -3,7 +3,6 @@ package br.com.rodrigolmti.android_dagger_modular
 import android.app.Application
 import br.com.rodrigolmti.injector.CoreComponent
 import br.com.rodrigolmti.injector.CoreComponentProvider
-import br.com.rodrigolmti.injector.Injector
 
 class MainApp : Application(), CoreComponentProvider {
 
@@ -11,7 +10,7 @@ class MainApp : Application(), CoreComponentProvider {
 
     override fun onCreate() {
         super.onCreate()
-        coreComponent = Injector.inject()
+        coreComponent = CoreComponent.inject()
     }
 
     override fun coreComponent(): CoreComponent = coreComponent

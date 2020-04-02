@@ -12,10 +12,9 @@ import javax.inject.Singleton
 interface AppComponent {
 
     fun inject(fragment: SplashFragment)
-}
 
-object Injector {
+    companion object {
 
-    @JvmStatic
-    fun inject(): AppComponent = DaggerAppComponent.builder().build()
+        fun inject(): AppComponent = DaggerAppComponent.builder().build()
+    }
 }

@@ -8,16 +8,15 @@ import javax.inject.Singleton
 @Component(
     modules = [CoreModule::class]
 )
-interface CoreComponent
+interface CoreComponent {
+    companion object {
+
+        fun inject(): CoreComponent = DaggerCoreComponent.builder().build()
+    }
+}
 
 interface CoreComponentProvider {
     fun coreComponent(): CoreComponent
-}
-
-object Injector {
-
-    @JvmStatic
-    fun inject(): CoreComponent = DaggerCoreComponent.builder().build()
 }
 
 fun Activity.coreComponent() = (this.applicationContext as CoreComponentProvider).coreComponent()
