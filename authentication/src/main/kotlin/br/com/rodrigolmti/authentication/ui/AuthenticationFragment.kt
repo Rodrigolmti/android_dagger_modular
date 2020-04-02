@@ -2,13 +2,13 @@ package br.com.rodrigolmti.authentication.ui
 
 import android.content.Context
 import android.os.Bundle
-import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import br.com.rodrigolmti.authentication.R
 import br.com.rodrigolmti.core_android.BaseFragment
 import br.com.rodrigolmti.navigator.Actions
+import kotlinx.android.synthetic.main.authentication_fragment.*
 
 class AuthenticationFragment : BaseFragment() {
 
@@ -26,11 +26,17 @@ class AuthenticationFragment : BaseFragment() {
         (context as AuthenticationActivity).component.inject(this)
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        Handler().postDelayed({
+        buttonSignIn.setOnClickListener {
             startActivity(Actions.openDashboard(requireContext()))
-        }, 2000L)
+            activity?.finish()
+        }
+
+        buttonSignUp.setOnClickListener {
+            startActivity(Actions.openDashboard(requireContext()))
+            activity?.finish()
+        }
     }
 }

@@ -36,6 +36,10 @@ dependencies {
 
     implementation AndroidX.appcompat
 
+    implementation project(Modules.dashboard)
+    implementation project(Modules.navigator)
+    implementation project(Modules.injector)
+
     implementation Dagger.core
     kapt Dagger.compiler
 }

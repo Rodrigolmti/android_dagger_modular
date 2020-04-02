@@ -28,6 +28,7 @@ class SplashFragment : Fragment() {
         super.onCreate(savedInstanceState)
         Handler().postDelayed({
             startActivity(Actions.openAuthentication(requireContext()))
+            activity?.finish()
         }, 2000L)
     }
 }

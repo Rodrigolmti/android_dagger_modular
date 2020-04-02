@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="br.com.rodrigolmti.feature_demo">
 
-    <application>
+    <application android:name=".DemoFeatureApp">
         <activity android:name=".ui.FeatureDemoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
