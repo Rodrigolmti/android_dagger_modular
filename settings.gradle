@@ -1,10 +1,9 @@
+include ':navigator'
 include ':feature-demo'
 include ':injector'
-include ':build-manager'
 include ':dashboard'
 include ':authentication'
 include ':core-android'
-include ':navigator'
 include ':app'
 
 rootProject.name = "android_dagger_modular"

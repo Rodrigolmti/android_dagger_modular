@@ -9,24 +9,6 @@
         android:id="@+id/splashFragment"
         android:name="br.com.rodrigolmti.android_dagger_modular.ui.SplashFragment"
         android:label="fragment_splash"
-        tools:layout="@layout/fragment_splash">
-        <action
-            android:id="@+id/action_splashFragment_to_authenticationActivity"
-            app:destination="@id/authenticationActivity"
-            app:popUpTo="@id/authenticationActivity"
-            app:popUpToInclusive="true" />
-        <action
-            android:id="@+id/action_splashFragment_to_dashboardActivity"
-            app:destination="@id/dashboardActivity" />
-    </fragment>
-
-    <activity
-        android:id="@+id/authenticationActivity"
-        android:name="br.com.rodrigolmti.authentication.ui.AuthenticationActivity"
-        android:label="AuthenticationActivity" />
-    <activity
-        android:id="@+id/dashboardActivity"
-        android:name="br.com.rodrigolmti.dashboard.ui.DashboardActivity"
-        android:label="DashboardActivity" />
+        tools:layout="@layout/fragment_splash" />
 
 </navigation>

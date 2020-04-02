@@ -21,8 +21,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="br.com.rodrigolmti.authentication.ui.AuthenticationActivity" />
-
     </application>
 
 </manifest>

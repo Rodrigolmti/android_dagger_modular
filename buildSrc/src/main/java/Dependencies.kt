@@ -18,6 +18,7 @@ object Releases {
 }
 
 object Modules {
+    const val app = ":app"
     const val authentication = ":authentication"
     const val coreAndroid = ":core-android"
     const val dashboard = ":dashboard"

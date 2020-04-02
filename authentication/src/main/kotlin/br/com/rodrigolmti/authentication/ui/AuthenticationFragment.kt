@@ -8,13 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import br.com.rodrigolmti.authentication.R
 import br.com.rodrigolmti.core_android.BaseFragment
+import br.com.rodrigolmti.navigator.Actions
 
 class AuthenticationFragment : BaseFragment() {
 
     private val viewModel by lazy { getViewModel(AuthenticationViewModel::class.java) }
-
-//    @Inject
-//    lateinit var dashboardNavigator: DashboardNavigator
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,7 +30,7 @@ class AuthenticationFragment : BaseFragment() {
         super.onCreate(savedInstanceState)
 
         Handler().postDelayed({
-            //            dashboardNavigator.showDashboard()
+            startActivity(Actions.openDashboard(requireContext()))
         }, 2000L)
     }
 }
